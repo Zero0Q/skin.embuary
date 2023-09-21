@@ -1103,6 +1103,7 @@
 	<!-- ############## TMDB ############## -->
 
 	<!-- currently in cinema -->
+	<!-- currently in cinema -->
 	<include name="W_Tmdb_InCinema">
 		<include content="PosterWidget">
 			<param name="id" value="$PARAM[id]"/>
@@ -1112,6 +1113,8 @@
 			<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 			<param name="sublabel" value="$INFO[ListItem.Premiered]"/>
 			<param name="widget_target" value="videos"/>
+			<param name="sortby" value="year"/>
+			<param name="sortorder" value="descending"/>
 			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
 			<param name="content" value="plugin://script.embuary.info/movie/now_playing"/>
 		</include>
@@ -1126,6 +1129,8 @@
 			<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 			<param name="sublabel" value="$INFO[ListItem.Premiered]"/>
 			<param name="widget_target" value="videos"/>
+			<param name="sortby" value="year"/>
+			<param name="sortorder" value="ascending"/>
 			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
 			<param name="content" value="plugin://script.embuary.info/movie/upcoming"/>
 		</include>
