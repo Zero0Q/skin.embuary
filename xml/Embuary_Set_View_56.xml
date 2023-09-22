@@ -188,7 +188,7 @@
 						<param name="top" value="48"/>
 					</include>
 					<!-- items -->
-					<include content="PosterWidget">
+					<include content="WideWidget">
 						<param name="id" value="56"/>
 						<param name="onup" value="7001"/>
 						<param name="ondown" value="5600"/>
@@ -212,7 +212,7 @@
 				<param name="content" value="$VAR[View_Cast_Content]"/>
 			</include>
 			<!-- Set movies -->
-			<include content="PosterWidget">
+			<include content="WideWidget">
 				<param name="visible" value="!ListItem.IsParentFolder + [Container.Content(sets) | String.IsEqual(ListItem.DBType,set)]"/>
 				<param name="force_visible" value="true"/>
 				<param name="id" value="5601"/>
