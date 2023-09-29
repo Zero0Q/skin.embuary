@@ -300,7 +300,7 @@
 		</definition>
 	</include>
 	<!-- Poster -->
-	<include name="PosterWidget">
+	<include name="WideWidget">
 		<param name="visible">true</param>
 		<param name="force_visible">false</param>
 		<param name="content_visible">true</param>
@@ -310,7 +310,7 @@
 		<param name="use_custom_content">true</param>
 		<param name="use_custom_onclick">false</param>
 		<param name="height">581</param>
-		<param name="layout">PosterLayout</param>
+		<param name="layout">WideLayout</param>
 		<param name="property_button">true</param>
 		<definition>
 			<control type="group">

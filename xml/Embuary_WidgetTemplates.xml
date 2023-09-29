@@ -20,13 +20,13 @@
 	</include>
 	<!-- Get by genre mixed -->
 	<include name="W_TagHub_MixedByGenre">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
 			<param name="headline" value="$LOCALIZE[31278] $INFO[Container($PARAM[id]).ListItem.Property(searchstring),',']"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="content" value="plugin://script.embuary.helper/?info=getbygenre&amp;unwatched=True&amp;tag='$ESCINFO[Window(home).Property(library.tags.$PARAM[nr].title)]'&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 		</include>
 	</include>
@@ -49,7 +49,7 @@
 	</include>
 	<!-- Recently added movies -->
 	<include name="W_TagHub_NewMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -57,7 +57,7 @@
 			<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 			<param name="sublabel" value="$INFO[ListItem.Year]"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="sortby" value="dateadded"/>
 			<param name="sortorder" value="descending"/>
 			<param name="content" value="videodb://movies/titles/?xsp=%7B%22group%22%3A%7B%22mixed%22%3Afalse%2C%22type%22%3A%22none%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22lessthan%22%2C%22value%22%3A%5B%221%22%5D%7D%2C%7B%22field%22%3A%22tag%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Window(home).Property(library.tags.$PARAM[nr].title)]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
@@ -65,7 +65,7 @@
 	</include>
 	<!-- Recommended movies -->
 	<include name="W_TagHub_RecommendedMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -73,7 +73,7 @@
 			<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 			<param name="sublabel" value="$INFO[ListItem.Year]"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="sortby" value="rating"/>
 			<param name="sortorder" value="descending"/>
 			<param name="content" value="videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%220%22%5D%7D%2C%7B%22field%22%3A%22tag%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[Window(home).Property(library.tags.$PARAM[nr].title)]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
@@ -81,31 +81,31 @@
 	</include>
 	<!-- Because you watched movie xyz -->
 	<include name="W_TagHub_SimilarMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
 			<param name="headline" value="$LOCALIZE[31018] $INFO[Container($PARAM[id]).ListItem.Property(searchstring)]"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="content" value="plugin://script.embuary.helper/?info=getsimilar&amp;type=movie&amp;tag='$ESCINFO[Window(home).Property(library.tags.$PARAM[nr].title)]'&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 		</include>
 	</include>
 	<!-- Suggestions by movie genre -->
 	<include name="W_TagHub_MoviesByGenre">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
 			<param name="headline" value="$LOCALIZE[31278] $INFO[Container($PARAM[id]).ListItem.Property(searchstring),',']"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="content" value="plugin://script.embuary.helper/?info=getbygenre&amp;unwatched=True&amp;type=movie&amp;tag='$ESCINFO[Window(home).Property(library.tags.$PARAM[nr].title)]'&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 		</include>
 	</include>
 	<!-- Random movies -->
 	<include name="W_TagHub_RandomMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -113,7 +113,7 @@
 			<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 			<param name="sublabel" value="$INFO[ListItem.Year]"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="sortby" value="random"/>
 			<param name="content" value="videodb://movies/tags/$INFO[Window(home).Property(library.tags.$PARAM[nr].id)]/?reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 		</include>
@@ -122,7 +122,7 @@
 	<include name="W_TagHub_MovieGenres">
 		<param name="headline">$LOCALIZE[135]</param>
 		<definition>
-			<include content="PosterWidget">
+			<include content="WideWidget">
 				<param name="id" value="$PARAM[id]"/>
 				<param name="onup" value="$PARAM[onup]"/>
 				<param name="ondown" value="$PARAM[ondown]"/>
@@ -130,7 +130,7 @@
 				<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 				<param name="sublabel" value="$INFO[ListItem.Year]"/>
 				<param name="widget_target" value="videos"/>
-				<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+				<param name="limit" value="$VAR[WideWidgetLimit]"/>
 				<param name="content" value="plugin://script.embuary.helper/?info=getgenre&amp;type=movie&amp;tag='$ESCINFO[Window(home).Property(library.tags.$PARAM[nr].title)]'&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 			</include>
 		</definition>
@@ -238,7 +238,7 @@
 	<include name="W_TagHub_TVShowGenres">
 		<param name="headline">$LOCALIZE[135]</param>
 		<definition>
-			<include content="PosterWidget">
+			<include content="WideWidget">
 				<param name="id" value="$PARAM[id]"/>
 				<param name="onup" value="$PARAM[onup]"/>
 				<param name="ondown" value="$PARAM[ondown]"/>
@@ -246,7 +246,7 @@
 				<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 				<param name="sublabel" value="$INFO[ListItem.Year]"/>
 				<param name="widget_target" value="videos"/>
-				<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+				<param name="limit" value="$VAR[WideWidgetLimit]"/>
 				<param name="content" value="plugin://script.embuary.helper/?info=getgenre&amp;type=tvshow&amp;tag='$ESCINFO[Window(home).Property(library.tags.$PARAM[nr].title)]'&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 			</include>
 		</definition>
@@ -272,7 +272,7 @@
 	</include>
 	<!-- Recently added movies -->
 	<include name="W_EmbyConHub_NewMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -282,13 +282,13 @@
 			<param name="widget_target" value="videos"/>
 			<param name="sortby" value="dateadded"/>
 			<param name="sortorder" value="descending"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="content" value="plugin://plugin.video.embycon/?media_type=Movies&amp;mode=GET_CONTENT&amp;use_cache=false&amp;url=%7Bserver%7D%2Femby%2FUsers%2F%7Buserid%7D%2FItems%2FLatest%3FLimit%3D%7BItemLimit%7D%26Recursive%3Dtrue%26GroupItems%3Dtrue%26SortBy%3DDateCreated%26Fields%3D%7Bfield_filters%7D%26SortOrder%3DDescending%26Filters%3D%7BIsUnplayed%7D%26IncludeItemTypes%3DMovie%26ImageTypeLimit%3D1%26format%3Djson%26ParentId%3d$INFO[Window(home).Property(plugin.video.embycon-view_item.$PARAM[nr].id)]&amp;reload=$INFO[Window(home).Property(plugin.video.embycon-embycon_widget_reload)]$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 		</include>
 	</include>
 	<!-- Recommended movies -->
 	<include name="W_EmbyConHub_RecommendedMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -296,7 +296,7 @@
 			<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 			<param name="sublabel" value="$INFO[ListItem.Year]"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="sortby" value="rating"/>
 			<param name="sortorder" value="descending"/>
 			<param name="content" value="plugin://plugin.video.embycon/?media_type=movies&amp;mode=GET_CONTENT&amp;url=%7bserver%7d%2femby%2fUsers%2f%7buserid%7d%2fItems%3fParentId%3d$INFO[Window(home).Property(plugin.video.embycon-view_item.$PARAM[nr].id)]%26Recursive%3dtrue%26IncludeItemTypes%3dMovie%26IsVirtualUnaired%3dfalse%26IsMissing%3dFalse%26Fields%3d%7bfield_filters%7d%26Filters%3dIsUnplayed%26ImageTypeLimit%3d1%26format%3djson&amp;reload=$INFO[Window(home).Property(plugin.video.embycon-embycon_widget_reload)]$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
@@ -304,7 +304,7 @@
 	</include>
 	<!-- Random movies -->
 	<include name="W_EmbyConHub_RandomMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -312,14 +312,14 @@
 			<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 			<param name="sublabel" value="$INFO[ListItem.Year]"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="sortby" value="random"/>
 			<param name="content" value="plugin://plugin.video.embycon/?media_type=movies&amp;mode=GET_CONTENT&amp;use_cache=false&amp;url=%7bserver%7d%2femby%2fUsers%2f%7buserid%7d%2fItems%3fParentId%3d$INFO[Window(home).Property(plugin.video.embycon-view_item.$PARAM[nr].id)]%26IsVirtualUnaired%3dfalse%26IncludeItemTypes%3dMovie%26CollapseBoxSetItems%3dTrue%26GroupItemsIntoCollections%3dTrue%26Recursive%3dtrue%26IsMissing%3dFalse%26Fields%3d%7bfield_filters%7d%26ImageTypeLimit%3d1%26SortBy%3dName%26SortOrder%3dAscending%26format%3djson&amp;reload=$INFO[Window(home).Property(plugin.video.embycon-embycon_widget_reload)]$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 		</include>
 	</include>
 	<!-- Movie genres -->
 	<include name="W_EmbyConHub_MovieGenres">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="height" value="551"/>
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
@@ -406,7 +406,7 @@
 	</include>
 	<!-- Genre -->
 	<include name="W_EmbyConHub_TVShowGenres">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -607,7 +607,7 @@
 	</include>
 	<!-- Recently added movies -->
 	<include name="W_NewMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -617,12 +617,12 @@
 			<param name="widget_target" value="videos"/>
 			<param name="sortby" value="dateadded"/>
 			<param name="sortorder" value="descending"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="content" value="videodb://movies/titles/?xsp=%7B%22limit%22%3A25%2C%22order%22%3A%7B%22direction%22%3A%22descending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22dateadded%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22dateadded%22%7D%2C%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%220%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 		</include>
 	</include>
 	<include name="W_EmbyCon_NewMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="visible" value="System.HasAddon(plugin.video.embycon)"/>
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
@@ -631,7 +631,7 @@
 			<param name="mainlabel" value="$INFO[ListItem.Label]"/>
 			<param name="sublabel" value="$INFO[ListItem.Year]"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="content" value="$VAR[EmbyCon.NewMovies]"/>
 		</include>
 	</include>
@@ -723,7 +723,7 @@
 	</include>
 	<!-- Movie genres -->
 	<include name="W_MovieGenres">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="height" value="551"/>
 			<param name="onup" value="$PARAM[onup]"/>
@@ -735,7 +735,7 @@
 		</include>
 	</include>
 	<include name="W_EmbyCon_MovieGenres">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="visible" value="System.HasAddon(plugin.video.embycon)"/>
 			<param name="id" value="$PARAM[id]"/>
 			<param name="height" value="551"/>
@@ -749,7 +749,7 @@
 	</include>
 	<!-- Recommended movies-->
 	<include name="W_RecommendedMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -757,14 +757,14 @@
 			<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 			<param name="sublabel" value="$INFO[ListItem.Year]"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="sortby" value="rating"/>
 			<param name="sortorder" value="descending"/>
 			<param name="content" value="videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22playcount%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%220%22%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 		</include>
 	</include>
 	<include name="W_EmbyCon_RecommendedMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="visible" value="System.HasAddon(plugin.video.embycon)"/>
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
@@ -775,13 +775,13 @@
 			<param name="widget_target" value="videos"/>
 			<param name="sortby" value="rating"/>
 			<param name="sortorder" value="descending"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="content" value="$VAR[EmbyCon.RecommendedMovies]"/>
 		</include>
 	</include>
 	<!-- Similar movies -->
 	<include name="W_SimilarMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -789,12 +789,12 @@
 			<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 			<param name="sublabel" value="$INFO[ListItem.Year]"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="content" value="plugin://script.embuary.helper/?info=getsimilar&amp;type=movie&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 		</include>
 	</include>
 	<include name="W_EmbyCon_SimilarMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="visible" value="System.HasAddon(plugin.video.embycon)"/>
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
@@ -803,13 +803,13 @@
 			<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 			<param name="sublabel" value="$INFO[ListItem.Year]"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="content" value="$VAR[EmbyCon.SimilarMovies]"/>
 		</include>
 	</include>
 	<!-- Fav movies -->
 	<include name="W_Kodi_FavMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -820,7 +820,7 @@
 		</include>
 	</include>
 	<include name="W_Emby_FavMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -831,7 +831,7 @@
 		</include>
 	</include>
 	<include name="W_EmbyCon_FavMovies">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="visible" value="System.HasAddon(plugin.video.embycon)"/>
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
@@ -869,7 +869,7 @@
 	</include>
 	<!-- Genres -->
 	<include name="W_TVShowGenres">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="height" value="551"/>
 			<param name="onup" value="$PARAM[onup]"/>
@@ -881,7 +881,7 @@
 		</include>
 	</include>
 	<include name="W_EmbyCon_TVShowGenres">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="visible" value="System.HasAddon(plugin.video.embycon)"/>
 			<param name="id" value="$PARAM[id]"/>
 			<param name="height" value="551"/>
@@ -925,7 +925,7 @@
 	</include>
 	<!-- Similar shows -->
 	<include name="W_SimilarShows">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
@@ -933,7 +933,7 @@
 			<param name="mainlabel" value="$INFO[ListItem.Title]"/>
 			<param name="sublabel" value="$INFO[ListItem.Year]"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="content" value="plugin://script.embuary.helper/?info=getsimilar&amp;type=tvshow&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 		</include>
 	</include>
@@ -1065,25 +1065,25 @@
 	</include>
 	<!-- Mixed suggestions by genre -->
 	<include name="W_MixedByGenre">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
 			<param name="headline" value="$LOCALIZE[31278] $INFO[Container($PARAM[id]).ListItem.Property(searchstring),',']"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="content" value="plugin://script.embuary.helper/?info=getbygenre&amp;unwatched=True&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 		</include>
 	</include>
 	<!-- Movie suggestions by genre -->
 	<include name="W_MoviesByGenre">
-		<include content="PosterWidget">
+		<include content="WideWidget">
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
 			<param name="ondown" value="$PARAM[ondown]"/>
 			<param name="headline" value="$LOCALIZE[31278] $INFO[Container($PARAM[id]).ListItem.Property(searchstring),',']"/>
 			<param name="widget_target" value="videos"/>
-			<param name="limit" value="$VAR[PosterWidgetLimit]"/>
+			<param name="limit" value="$VAR[WideWidgetLimit]"/>
 			<param name="content" value="plugin://script.embuary.helper/?info=getbygenre&amp;unwatched=True&amp;type=movie&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]"/>
 		</include>
 	</include>
@@ -1140,7 +1140,7 @@
 	<!-- ############## Custom widgets ############## -->
 
 	<include name="W_Custom_Template">
-		<include condition="!Skin.HasSetting(UserWidget$PARAM[nr]_forceIcon) + [String.IsEqual(Skin.String(UserWidget$PARAM[nr]_layout),HomePosterWidget) | String.IsEmpty(Skin.String(UserWidget$PARAM[nr]_layout))]" content="PosterWidget">
+		<include condition="!Skin.HasSetting(UserWidget$PARAM[nr]_forceIcon) + [String.IsEqual(Skin.String(UserWidget$PARAM[nr]_layout),HomeWideWidget) | String.IsEmpty(Skin.String(UserWidget$PARAM[nr]_layout))]" content="WideWidget">
 			<param name="visible" value="!String.IsEmpty(Skin.String(UserWidget$PARAM[nr]_path))"/>
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
@@ -1176,7 +1176,7 @@
 			<param name="limit" value="$INFO[Skin.String(UserWidget$PARAM[nr]_limit)]"/>
 			<param name="content" value="$VAR[CWidgetReloadPath$PARAM[nr]]"/>
 		</include>
-		<include condition="Skin.HasSetting(UserWidget$PARAM[nr]_forceIcon) + [String.IsEqual(Skin.String(UserWidget$PARAM[nr]_layout),HomePosterWidget) | String.IsEmpty(Skin.String(UserWidget$PARAM[nr]_layout))]" content="PosterWidget">
+		<include condition="Skin.HasSetting(UserWidget$PARAM[nr]_forceIcon) + [String.IsEqual(Skin.String(UserWidget$PARAM[nr]_layout),HomeWideWidget) | String.IsEmpty(Skin.String(UserWidget$PARAM[nr]_layout))]" content="WideWidget">
 			<param name="visible" value="!String.IsEmpty(Skin.String(UserWidget$PARAM[nr]_path))"/>
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
@@ -1487,7 +1487,7 @@
 			<param name="content" value="$PARAM[content]"/>
 			<param name="layout" value="PVR4to3Layout"/>
 		</include>
-		<include condition="String.IsEqual(Skin.String(EPGar),2to3)" content="PosterWidget">
+		<include condition="String.IsEqual(Skin.String(EPGar),2to3)" content="WideWidget">
 			<param name="visible" value="$PARAM[visible]"/>
 			<param name="id" value="$PARAM[id]"/>
 			<param name="onup" value="$PARAM[onup]"/>
